@@ -9,6 +9,8 @@ local link_dirs = {}
 
 local apps = {};
 local include_dirs = {"./include", ".", "/usr/include"};
+local link_dirs = {}
+local link = {}
 local  build_files  = {}
 local output_file = "a.out"
 
@@ -25,8 +27,27 @@ end
 
 
 
+
+
 for i = 1, #arg do
-    if arg[i] == "-i" then
+    if arg[i] == "-ldir" then
+        for j = i + 1, #arg do
+            if arg[j]:sub(1,1) == "-" then
+                break
+            end
+            table.insert(link_dirs, arg[j])
+        end
+    end
+    
+    if arg[i] == "-l" then
+        for j = i + 1, #arg do
+            if arg[j]:sub(1,1) == "-" then
+                break
+            end
+            table.insert(link, arg[j])
+        end
+    end
+     if arg[i] == "-i" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
                 break
@@ -35,12 +56,6 @@ for i = 1, #arg do
         end
     end
     
-    
-    
-end
-
-
-for i = 1, #arg do
     if arg[i] == "-f" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
@@ -48,12 +63,18 @@ for i = 1, #arg do
             end
             table.insert(build_files, arg[j])
         end
-        
-      elseif arg[i] == "-o"  then
+    
+    
+    
+end
+
+
+
+
+
+for i = 1, #arg do
+if arg[i] == "-o"  then
         output_file = arg[i+1] or "a.out"
-      
-      
-        
     end
     
     
