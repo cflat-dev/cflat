@@ -1,24 +1,13 @@
 
 
-/*
 
-cflat nwe fuehcre
-
-
-$append <macro> , <x>
-
-adds <x> to  <macro>
-
-@note this only works on marocs
-
-*/
 
 #include<stdio.h>
 #include<stdint.h>
 #include<stdlib.h>
 #include<cflib.h>
 
-#include<lib.cf>
+#include "lib.cf"
 
 
 
