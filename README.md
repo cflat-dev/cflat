@@ -17,41 +17,48 @@ CFlat stays close to C’s design philosophy while smoothing out many of its rou
 **main.cf**
 
 ```c
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <cflib.h>
+#include<stdio.h>
+#include<stdint.h>
+#include<stdlib.h>
+#include<cflib.h>
+
 
 #macro vec2(T)
+
 typedef struct {
     T x;
     T y;
 } vec2_##T ;
+
 #endm
 
+
 void my_free(void *tr) {
+    printf("freed %p",tr);
     free(tr);
 }
+
 
 vec2(int)
 
 int main()
 @{
-    vec2_int vec;
-    vec.x = 5;
-    vec.y = 3;
 
-    i32 *buffer = malloc(sizeof(i32));
-    mfcu(my_free, buffer);
+vec2_int vec;
+vec.x = 5;
+vec.y = 3;
 
-    {
-        printf("welcome to cflat\n");
-    }
+i32 * buffer = malloc(sizeof(i32));
+mfcu(my_free,buffer);
 
-    *buffer = 3;
+{
+printf(" welcome to cflat\n");
+}
 
-    return 0;
-    printf("hello0");
+*buffer = 3;
+
+return 0;
+printf("hello0");
 }
 ```
 

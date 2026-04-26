@@ -19,6 +19,7 @@ typedef struct {
 
 
 void my_free(void *tr) {
+    printf("freed %p",tr);
     free(tr);
 }
 
