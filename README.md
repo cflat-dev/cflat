@@ -55,10 +55,10 @@ int main()
 }
 ```
 
-## **how to  compile  the example **
+## how to  compile  the example 
 cfc -f main.cf -o  main
 
 
-## ** how to install ** 
+## how to install 
 
  download the installer script from the repo and run it
