@@ -30,6 +30,8 @@ end
 
 
 for i = 1, #arg do
+    
+    -- -ldir
     if arg[i] == "-ldir" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
@@ -38,7 +40,8 @@ for i = 1, #arg do
             table.insert(link_dirs, arg[j])
         end
     end
-    
+
+    -- -l
     if arg[i] == "-l" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
@@ -47,7 +50,9 @@ for i = 1, #arg do
             table.insert(link, arg[j])
         end
     end
-     if arg[i] == "-i" then
+
+    -- -i
+    if arg[i] == "-i" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
                 break
@@ -55,7 +60,8 @@ for i = 1, #arg do
             table.insert(include_dirs, arg[j])
         end
     end
-    
+
+    -- -f
     if arg[i] == "-f" then
         for j = i + 1, #arg do
             if arg[j]:sub(1,1) == "-" then
@@ -63,9 +69,8 @@ for i = 1, #arg do
             end
             table.insert(build_files, arg[j])
         end
-    
-    
-    
+    end
+
 end
 
 
