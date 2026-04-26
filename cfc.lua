@@ -18,6 +18,10 @@ local link_libs = {}
 local  build_files  = {}
 local output_file = "a.out"
 
+local mode = ""
+
+
+
 -- opening logic
 if (arg[1] == nil or arg[2] == nil) then
     print("usage: cfc  -f <files>  -o <output>")
@@ -74,6 +78,19 @@ for i = 1, #arg do
             table.insert(build_files, arg[j])
         end
     end
+    
+    
+if arg[i] == "-static" then
+    mode = "-static"
+end
+
+if arg[i] == "-shared" then
+    shared_link = true
+    mode = "-shared -fPIC"
+end
+
+    
+    
 
 end
 
@@ -164,7 +181,7 @@ for  i=1,#build_files do
   end
 
 
-os.execute("gcc " .. files .. " -o  " .. output_file .. link_dir_str .. link_lib_str )
+os.execute("gcc " .. files .. " -o  " .. output_file .. link_dir_str .. link_lib_str  .. "   " .. mode)
 
 for i=1,#build_files do 
 os.execute("rm " .. build_files[i] .. ".c" )
