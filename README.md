@@ -1,6 +1,6 @@
-## What is CFlat?
+## Why Kern?
 
-CFlat is a modern **C dialect** that enhances the C language with:
+Kern is a modern **C dialect** that enhances the C language with:
 
 - **RAII (Resource Acquisition Is Initialization)**  
 - **Automatic cleanup and resource management**  
@@ -8,13 +8,13 @@ CFlat is a modern **C dialect** that enhances the C language with:
 - **Cleaner syntax for common operations**  
 - **Optional modern features without sacrificing C’s performance**
 
-CFlat stays close to C’s design philosophy while smoothing out many of its rough edges.
+Kern stays close to C’s design philosophy while smoothing out many of its rough edges.
 
 ---
 
 ## CFlat Example
 
-**main.cf**
+**main.kern**
 
 ```c
 #include<stdio.h>
@@ -63,7 +63,7 @@ printf("hello0");
 ```
 
 ## how to  compile  the example 
-cfc -f main.cf -o  main
+kernc -f main.cf -o  main
 
 
 ## how to install 

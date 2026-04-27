@@ -1,4 +1,4 @@
-### cfc flags
+### Kern flags
 
 
 | Flag    | Description                                                   | Example                               |
