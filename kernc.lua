@@ -1,11 +1,11 @@
 
-package.path = "/usr/local/share/cflat/?.lua;" .. package.path
+package.path = "/usr/local/share/kern/?.lua;" .. package.path
 
 
-pp = require("cfpp")
+pp = require("kernpp")
 
 
---- cfc.lua
+--- kernc.lua
 
 
 local link_dirs = {}
@@ -24,7 +24,7 @@ local mode = ""
 
 -- opening logic
 if (arg[1] == nil or arg[2] == nil) then
-    print("usage: cfc  -f <files>  -o <output>")
+    print("usage: kernc  -f <files>  -o <output>")
     return
 end
 

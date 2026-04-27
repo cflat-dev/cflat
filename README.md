@@ -12,7 +12,7 @@ Kern stays close to C’s design philosophy while smoothing out many of its roug
 
 ---
 
-## CFlat Example
+## Kern Example
 
 **main.kern**
 

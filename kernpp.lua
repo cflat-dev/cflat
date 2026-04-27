@@ -1,5 +1,5 @@
 
--- cflat preprocesser v1.1.0
+--   Kern preprocesser v1.1.0
 
 
 
@@ -32,7 +32,7 @@ test = test:gsub(include_pattern, function(inc)
     end
 
     -- Expand .cf files
-    if inc:match("%.cf$") then
+    if inc:match("%.kern$") then
       
       
       -- if included do not
@@ -112,7 +112,7 @@ local str = test:gsub(format, function(block)
 end)
 
 
-str = "#include<cflat/mfcu.h>\n" .. str
+str = "#include<kern/mfcu.h>\n" .. str
 
 
 
