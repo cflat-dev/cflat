@@ -34,7 +34,7 @@ typedef struct {
 
 
 void my_free(void *tr) {
-    printf("freed %p",tr);
+    printf("freed %p\n",tr);
     free(tr);
 }
 
@@ -52,7 +52,7 @@ i32 * buffer = malloc(sizeof(i32));
 mfcu(my_free,buffer);
 
 {
-printf(" welcome to cflat\n");
+printf(" welcome to Kern\n");
 }
 
 *buffer = 3;
@@ -66,10 +66,10 @@ printf("hello0");
 kernc -f main.cf -o  main
 
 
-## how to install 
+## installation
 
- download the installer script from the repo and run it
-
+download the repo 
+then run the installer.sh file to install
 
 ### further documention
 [See docs](docs.md)
