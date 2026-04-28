@@ -1,4 +1,4 @@
-## Why Kern?
+## Why KernC?
 
 Kern is a modern **C dialect** that enhances the C language with:
 
@@ -8,12 +8,12 @@ Kern is a modern **C dialect** that enhances the C language with:
 - **Cleaner syntax for common operations**  
 - **Optional modern features without sacrificing C’s performance**
 
-Kern stays close to C’s design philosophy while smoothing out many of its rough edges.
-Kern compiles to portable C, making it compatible with any C toolchain.
+KernC stays close to C’s design philosophy while smoothing out many of its rough edges.
+KernC compiles to portable C, making it compatible with any C toolchain.
 
-## Kern Example
+## KernC Example
 
-**main.kern**
+**main.kc**
 
 ```c
 #include<stdio.h>
@@ -51,7 +51,7 @@ i32 * buffer = malloc(sizeof(i32));
 mfcu(my_free,buffer);
 
 {
-printf(" welcome to Kern\n");
+printf(" welcome to KernC\n");
 }
 
 *buffer = 3;
@@ -62,7 +62,7 @@ printf("hello0");
 ```
 
 ## how to  compile  the example 
-kernc -f main.kern -o  main
+kernc -f main.kc -o  main
 
 
 ## installation

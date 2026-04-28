@@ -29,7 +29,7 @@ if (arg[1] == nil or arg[2] == nil) then
 end
 
 if (arg[1] == "-v") then
-    print("cfc  v.10.0")
+    print("kernc  v.1.0.0")
 return
 end
 

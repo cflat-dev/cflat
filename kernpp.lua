@@ -32,7 +32,7 @@ test = test:gsub(include_pattern, function(inc)
     end
 
     -- Expand .cf files
-    if inc:match("%.kern$") then
+    if inc:match("%.kc$") then
       
       
       -- if included do not
