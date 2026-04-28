@@ -42,7 +42,7 @@ to release a variable from cleanup call
 release(variable ptr) 
 ```
 
-the varibles within the raii scope will be cleaned up in reverse order of registering (LIFO ordering)
+the variables within the raii scope will be cleaned up in reverse order of registering (LIFO ordering)
 
 **note that to return a variable that has been marked for cleanup you must call release  ***
 
@@ -89,6 +89,6 @@ const char * name  = #value
 ```
 
 
-*** standard library ***
+**standard library**
 Currently there is no standard library.
 Soon It will be added to a future release (coming soon)
