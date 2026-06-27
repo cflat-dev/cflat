@@ -1,8 +1,0 @@
-# IDE files
-.idea/
-.vscode/
-
-# Build files
-cmake-build-debug/
-build/
-out/
